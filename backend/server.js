@@ -18,7 +18,7 @@ app.post("/api/chat", async (req, res) => {
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
       {
-        model: "google/gemini-flash-1.5",
+        model: "google/gemma-3-27b-it:free",
         messages: [
           {
             role: "system",
