@@ -24,7 +24,7 @@ app.post("/api/chat", async (req, res) => {
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
       {
-        model: "deepseek/deepseek-r1",
+        model: "google/gemini-flash-1.5",
         messages: [
           {
             role: "system",
