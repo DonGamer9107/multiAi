@@ -44,10 +44,13 @@ app.post("/api/chat", async (req, res) => {
       }
     );
 
-    res.json({
-      reply: response.data.choices[0].message.content
-    });
+    const reply =
+  response.data.choices?.[0]?.message?.content ||
+  "No response";
 
+res.json({
+  reply
+});
   } catch (error) {
     console.log(error.response?.data || error.message);
 
