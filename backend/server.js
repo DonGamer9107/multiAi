@@ -38,11 +38,14 @@ app.post("/api/chat", async (req, res) => {
       }
     );
 
-console.log(response.data);
+console.log(
+  JSON.stringify(response.data, null, 2)
+);
 
 const reply =
   response.data?.choices?.[0]?.message?.content ||
-  "Model returned empty response";
+  response.data?.choices?.[0]?.text ||
+  JSON.stringify(response.data);
     
   } catch (error) {
     console.log(error.response?.data || error.message);
