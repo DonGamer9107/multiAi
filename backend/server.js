@@ -10,12 +10,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.json({
-    success: true,
-    message: "Nova AI Backend Running"
-  });
-});
 
 app.post("/api/chat", async (req, res) => {
   try {
