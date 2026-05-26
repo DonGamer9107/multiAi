@@ -43,6 +43,7 @@ console.log(response.data);
 const reply =
   response.data?.choices?.[0]?.message?.content ||
   "Model returned empty response";
+    
   } catch (error) {
     console.log(error.response?.data || error.message);
 
